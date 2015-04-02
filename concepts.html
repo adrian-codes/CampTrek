@@ -1,0 +1,121 @@
+CampTrek
+
+Camping Social App
+
+Features
+
+users post a photo/photos with descriptions, geotags and hashtags
+summary of there camping trip experience
+rating 1/10
+tips and suggestions to others
+users can follow other users if they like there posts/camping advice
+
+users can find camping spots based on there location or by entering a certain area
+camping spots will have some general information along with the posts from users populating beneath it
+general information will include weather for that spot, best times of year to go, tools and equipment you might need for that specific spot, directions, sites related to booking camping spots, whatever i can source from other sites
+rating 1/10. use campfire icons for rating system
+
+PAGES NEEDED
+
+Landing page/sign in/register with high resolution camping pic as background
+Search page to search different spots
+Camping Spot page w/ general info and posts underneath it
+Page to post your pic/review of ur trip
+
+Blue Sky Features: ability to search by category, beach, woods, dessert, snow, lake, river, activities
+Comments on Posts
+In app camera to take pics inside the app and post/save for later post
+Friend people and ability to message each other to ask questions about certain destinations
+
+
+PROTOTYPE
+
+Google maps javascript finding location on map from users computer 
+
+
+phase 1
+1. user login/registration page
+    1. register user
+    2. login user/set $_SESSION
+    3. pull post as example
+2. page to post
+    1. Submit inputs to db
+        Inputs Include:
+            1. National Park
+            2. Camping Spot
+            3. Date
+            4. Category ie beach, dessert, woods etc...
+            5. Image/ w or wout geotags and hashtags and description
+            6. Summary of experience there
+            7. Rating 1/10
+            8. Tips and Suggestions Section
+    2. Upload image to local folder
+    3. Upload image url to image db
+    4. Show success if posted correctly
+    5. Show post underneath or route to stream page
+3. posts in stream by date ascending w/
+    1. Be able to scroll throught posts
+    2. Button to "like" post
+    3. Clicking posts makes it bigger (either modal or seperate page)
+    4. Clickable hashtags show other related posts
+        1. store hashtags via regex into db table specifically for hashtage to article id realtion
+        2. (LATER) on search ajax call to server to find all posts that have that hashtag in them
+4. Profile page
+    1. Display
+    2. Ability to edit the below(LATER)
+        1. Username
+        2. Password
+        3. Email
+        4. Profile Image
+        5. About Me
+
+
+DB SCHEMA
+
+Landing page
+
+users table:
+    1. user id (int)
+    2. username (varchar)
+    3. email    (varchar)
+    4. password (varchar)
+    5. user avatar url (varchar)
+    6. date profile created
+    7. last login
+    8. status (int for levels) admin, un verified, verified, banned
+
+post table
+    1. Park id
+    2. campground   (varchar)
+    3. time created (int 11) (show date on post)
+    4. category (varchar)
+    5. rating (float)
+    6. summary (varchar)
+    7. tips/tricks  (varchar)
+    8. user id corresponds with 'users' table id (int)
+    9. like incrementer (int) (LATER)
+
+national park table
+    1. id corresponds to 'post' table park id
+    2. parkName
+    3. lat
+    4. long
+    5. desc/gen info
+    6. google map object
+    7. images table id (varchar) featured photo for park
+
+images table
+    1. image id 
+    2. src id (park id or post id) (int)
+    3. src type (park or post) (enum) 'park','post'
+    3. photoURL
+    4. photo description
+    5. authorID corres to users table
+    6. tagged id (LATER)
+
+ratings table
+    1. user id
+    2. src id
+    3. src type (post/park)
+    4. rating (1/10)
+    5. date created (timestamp)
