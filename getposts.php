@@ -5,7 +5,7 @@
    
     $outputArray = [];
         
-    $html = [];
+    $data = [];
 
     while($post_row = mysqli_fetch_assoc($results)){
 
@@ -17,15 +17,25 @@
         $summary = $post_row['summary'];
         $tips_tricks = $post_row['tips_tricks'];
         $user_id= $post_row['user_id'];
-        $like_count = $post_row['like_content']; 
+        $like_count = $post_row['like_count']; 
 
-        $html[] = "<div class='container_div' data-user='$user_id' data-id='$id'><p class='date'>$timestamp</p><h3 class='title'>$title</h3><p class='category'>$category</p><div class='content'>".nl2br($content)."</div><a href='?' data-id='$id' id='readMore'>Read more...</a></div><br>";
+        $data[] = [
+            'id' => $id,
+            'campground' => $campground,
+            'time_created' => $time_created,
+            'category' => $category,
+            'rating' => $rating,
+            'summary' => $summary,
+            'tips_tricks' => $tips_tricks,
+            'user_id' => $user_id,
+            'like_count' => $like_count
+        ];
         
     }
 
     if(mysqli_num_rows($results) > 0){
         $outputArray['success'] = true; 
-        $outputArray['html'] = $html;
+        $outputArray['data'] = $data;
     }
     else  
     {

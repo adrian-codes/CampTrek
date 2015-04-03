@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <?php include('includes/header.php'); ?>
     <div class="container">
         <h1>Welcome to the homepage!</h1>
         <form class="form-horizontal col-md-6" action="loginpage.php" method="post">
