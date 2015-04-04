@@ -1,7 +1,7 @@
 <header class="navbar navbar-default navbar-static-top">
     <nav class='container' role='navigation'>
         <div class='navbar-header'>
-        <a href="home.php" class='navbar-brand'>Adrian's Blog</a>
+        <a href="home.php" class='navbar-brand'>CampTrek</a>
         
         <button type='button' class="navbar-toggle collapsed" data-toggle='collapse' data-target='.navbar-collapse'>
             <span class='sr-only'>Toggle navigation</span>    

@@ -3,17 +3,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>CampTrek | Home</title>
+    <title>CampTrek | Upload Photos</title>
     <?php include('scripts.php'); ?>
 </head>
 <body>
     <?php include('includes/header.php'); ?>
     <div class="container">
-        <h1>Welcome to the home page.</h1>
-        <p>You've sucessfully logged in.</p>
-        <div class="postContainer">
-        
-        </div>
+        <h2>Step Two: Upload Your Photos</h2>
     </div>
+
 </body>
 </html>

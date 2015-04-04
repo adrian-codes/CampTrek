@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Untitled Document</title>
+    <title>CampTrek</title>
     <?php include('scripts.php'); ?>
 </head>
 

@@ -1,14 +1,17 @@
 <?php
+    //connect to database
     $con = mysqli_connect('localhost', 'root', '', 'camptrek');
+    //create sql query
     $sql = 'SELECT p.*, i.src_id, i.src_type, i.photoURL, i.photoDesc, i.author_id, you.username FROM `post` AS p JOIN `images` AS i ON p.id = i.src_id JOIN `users` AS you ON p.user_id = you.id';
+    //execute query
     $results = mysqli_query($con, $sql);
-   
+    //declare arrays to be echo'd out
     $outputArray = [];
-        
     $data = [];
-
+    //loop through results
     while($post_row = mysqli_fetch_assoc($results)){
-
+        
+        //store data in variables for easier access
         $id = $post_row['id'];
         $campground = $post_row['campground'];
         $time_created = $post_row['time_created'];   
@@ -26,6 +29,7 @@
         $image_author_id = $post_row['author_id'];
         $username = $post_row['username'];
 
+        //store data in associative array
         $data[] = [
             'id' => $id,
             'campground' => $campground,
@@ -47,16 +51,17 @@
         
     }
 
-
+    //check if we received data
     if(mysqli_num_rows($results) > 0){
         $outputArray['success'] = true; 
         $outputArray['data'] = $data;
     }
+    //attach error message if no data
     else  {
         $outputArray['success'] = false;
         $outputArray['message'] = "There was nothing retrieved!";
         
     }
-
+    //json encode data and echo 
     echo (json_encode($outputArray));
 ?> 
