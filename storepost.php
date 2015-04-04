@@ -55,6 +55,8 @@ if(isset($_POST)){
     
     //if no errors close connection and re-route to uploadphotos.php page 
     if(count($errorArray) == 0){
+        $last_id = mysqli_insert_id($conn);
+        $_SESSION['src_id'] = $last_id;
         mysqli_close($con);
         header('Location: uploadphotos.php');
         $outputArray['success'] = true;
