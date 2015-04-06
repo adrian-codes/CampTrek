@@ -33,7 +33,7 @@ if(isset($_POST)){
         
         //store form data into variables for easier access
         $campground = $_POST['campground'];
-        $date = $_POST['date'];
+        $date = strtotime($_POST['date']);
         $category = $_POST['category'];
         $rating = $_POST['rating'];
         $summary = $_POST['summary'];
@@ -55,8 +55,11 @@ if(isset($_POST)){
     
     //if no errors close connection and re-route to uploadphotos.php page 
     if(count($errorArray) == 0){
-        $last_id = mysqli_insert_id($conn);
-        $_SESSION['src_id'] = $last_id;
+        $last_id = mysqli_insert_id($con);
+        $_SESSION['bloginfo'] = array(
+            'src_id' => $last_id,
+            'src_type' => 'post'
+        );
         mysqli_close($con);
         header('Location: uploadphotos.php');
         $outputArray['success'] = true;

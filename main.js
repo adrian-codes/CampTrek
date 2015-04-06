@@ -5,6 +5,7 @@ $('document').ready(function(){
         url: 'getposts.php',
         dataType: 'json',
         method: 'POST',
+        cache: false,
         success: function(response){
             //console.log("My data: " , response.data);
             

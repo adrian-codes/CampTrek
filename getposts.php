@@ -50,6 +50,7 @@
         ];
         
     }
+    //print_r($data);
 
     //check if we received data
     if(mysqli_num_rows($results) > 0){
