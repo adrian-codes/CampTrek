@@ -31,7 +31,7 @@ $('document').ready(function(){
                 //create div with info
                 $('<div class="infoDiv col-md-4" data-user="'+user_id+'" data-id="'+id+'"><p>User: '+username+'<p>Campground: '+campground+'</p><p>Date: '+date+'</p><p>Category: '+category+'</p><p>Rating: '+rating+'</p></div>').appendTo(postDiv);
                 //create div with photo
-                $('<div class="photoDiv col-md-8"><img src="'+photoURL+'" class="img-responsive" alt="image"><p>Description: '+photoDesc+'</p></div>').appendTo(postDiv);
+                $('<div class="photoDiv col-md-8"><img src="'+photoURL+'" class="img-responsive" alt="image"><p>Caption: '+photoDesc+'</p></div>').appendTo(postDiv);
                 //create div with summary
                 $('<div class="summaryDiv col-md-12"><p>Summary: '+summary+'</p><p>Tips & Tricks: '+tips_tricks+'</div><hr class="col-md-12">').appendTo(postDiv);
                 //append to document

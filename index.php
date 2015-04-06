@@ -11,7 +11,8 @@
 <body>
     <?php include('includes/header.php'); ?>
     <div class="container">
-        <h1>Welcome to the homepage!</h1>
+        <h1>Welcome to CampTrek!</h1>
+        <h3>Login below<small><a href="signup.php">&nbsp;Not a member? Sign up here!</a></small></h3>
         <form class="form-horizontal col-md-6" action="loginpage.php" method="post">
             <div class="form-group">
                 <label for="inputEmail" class="col-md-2 control-label">Email</label>

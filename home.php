@@ -9,8 +9,7 @@
 <body>
     <?php include('includes/header.php'); ?>
     <div class="container">
-        <h1>Welcome to the home page.</h1>
-        <p>You've sucessfully logged in.</p>
+        <h1>Latest Reviews</h1>
         <div class="postContainer">
         
         </div>

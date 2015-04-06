@@ -12,18 +12,19 @@
 <body>
     <?php include( 'includes/header.php'); ?>
     <div class="container">
-        <h2>Step Two: Upload Your Photos</h2>
+        <h2 class="col-md-12">Step Two: Upload Your Photos</h2>
         <form class="form-horizontal col-md-6" action="uploadphotos.php" method="post" enctype="multipart/form-data">
-            <h4>Select image to upload as new profile image:</h4>
+            <h4 class="col-md-12">Select image to upload with your review!</h4>
             <input type="file" name="fileToUpload" id="fileToUpload">
-            <input class="btn btn-default" type="submit" value="Upload File" name="submit">
+            
             <br>
             <div class="form-group">
-            <label for="Description" class="col-md-2 control-label">Description</label>
+            <label for="Description" class="col-md-2 control-label">Caption</label>
             <div class="col-md-10">
-                <input type="text" name="description" class="form-control" placeholder="Description">
+                <input type="text" name="description" class="form-control" placeholder="Caption your photo...">
             </div>
             </div>
+            <input class="btn btn-default" type="submit" value="Upload File" name="submit">
         </form>
 <?php
 $con = mysqli_connect('localhost', 'root', '', 'camptrek'); 
@@ -60,8 +61,7 @@ if(isset($_FILES['fileToUpload'])){
         }
         if($upload_ok){
             if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file)){
-                echo "The file ".$_FILES['fileToUpload']['name']." has been uploaded.<br><br><br><br>";   
-                echo "<div class='photoDiv col-md-8'><img class='img-responsive' alt='image' src='$target_file'/></div>";    
+                echo "The file ".$_FILES['fileToUpload']['name']." has been uploaded.<br><br><br><br><a href='home.php' class='btn btn-success' role='button'>Click here to check out your post!</a><br><br><br><br><div class='photoDiv col-md-8'><img class='img-responsive' alt='image' src='$target_file'/></div>";    
             }
             if($result = mysqli_query($con, $sql)){
                 if(mysqli_affected_rows($con) > 0){
