@@ -65,6 +65,7 @@ $('document').ready(function(){
         }
     }); // end of ajax call
     
+    //store updated info if entered else store placeholder info
     var usernameEl = $('#username');
     if(usernameEl.val() = ""){
        var username = usernameEl.attr('placeholder');
@@ -79,7 +80,14 @@ $('document').ready(function(){
     else{
         username = usernameEl.val();
     }
-    data = [];
+    //create and store formdata object
+    
+    //store updated data in object
+   var data = {
+        username: username,
+        email: email,
+        avatar: ,
+   };
     
     //ajax call sending input data to updateprofile.php
     $.ajax({

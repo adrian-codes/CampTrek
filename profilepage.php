@@ -30,7 +30,7 @@
             </form>
             <div id="profileImage" class="col-md-8">
             </div>
-            <form class="form-horizontal col-md-6" action="uploadphotos.php" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal col-md-6" id="uploadImage" action="" method="post" enctype="multipart/form-data">
                 <h4 class="col-md-12">Select a new profile image!</h4>
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <br>
