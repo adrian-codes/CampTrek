@@ -10,7 +10,7 @@
     <?php include('includes/header.php'); ?>
     <div class="container">
         <h1>Latest Reviews</h1>
-        <div class="postContainer">
+        <div id="postContainer">
         
         </div>
     </div>

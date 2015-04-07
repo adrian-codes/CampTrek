@@ -35,10 +35,59 @@ $('document').ready(function(){
                 //create div with summary
                 $('<div class="summaryDiv col-md-12"><p>Summary: '+summary+'</p><p>Tips & Tricks: '+tips_tricks+'</div><hr class="col-md-12">').appendTo(postDiv);
                 //append to document
-                postDiv.appendTo('.postContainer');
+                postDiv.appendTo('#postContainer');
                 
             }
         }
         
-    });
+    }); //end of ajax
+    
+    //ajax call receiving user info for profile page
+    $.ajax({
+        url: 'getprofile.php',
+        dataType: 'json',
+        method: 'post',
+        success: function(response){
+            console.log(response);
+            
+            var username = response.data[0].username;
+            var email = response.data[0].email;
+            var date_created = response.data[0].date_created;
+            var last_login = response.data[0].last_login;
+            var avatar_url = response.data[0].avatar_url;
+            
+            $('#username').attr('placeholder', username);
+            $('#email').attr('placeholder', email);
+            $('#date_created').text(date_created);
+            $('#last_login').text(last_login);
+            $('#profileImage').html('<p><strong>Profile Image:</strong></p><img src="'+avatar_url+'" class="img-responsive" alt="image">');
+            
+        }
+    }); // end of ajax call
+    
+    var usernameEl = $('#username');
+    if(usernameEl.val() = ""){
+       var username = usernameEl.attr('placeholder');
+    }
+    else{
+        username = usernameEl.val();
+    }
+    var emailEl = $('#email');
+    if(emailEl.val() = ""){
+       var email = emailEl.attr('placeholder');
+    }
+    else{
+        username = usernameEl.val();
+    }
+    data = [];
+    
+    //ajax call sending input data to updateprofile.php
+    $.ajax({
+        
+    }); //end of ajax
+    
+    //ajax call sending image to updateavatar.php
+    $.ajax({
+        
+    }); //end of ajax
 });
