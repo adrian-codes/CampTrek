@@ -29,7 +29,7 @@
 <?php
 $con = mysqli_connect('localhost', 'root', '', 'camptrek'); 
 $userID = $_SESSION['userinfo']['id'];
-//fix src_id and src_type not working 
+
 if(isset($_FILES['fileToUpload'])){
 
     $src_id = $_SESSION['bloginfo']['src_id'];
