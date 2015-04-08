@@ -18,21 +18,21 @@ $id = $_SESSION['userinfo']['id'];
 
             if($_FILES['fileToUpload']['error'] > 0){
                 $upload_ok = false;
-                echo "There was an error with your upload.";
+                $errorArray['fileupload'] =  "There was an error with your upload.";
             }
             if($_FILES['fileToUpload']['size'] > 5000000){
                 $upload_ok = false;
-                echo "File size is too big.";   
+                $errorArray['filesize'] =  "File size is too big.";   
             }
             if(in_array($_FILES['fileToUpload']['type'], $extension_array)){
                 $upload_ok = true;  
             } else{
-             echo "Not a valid type!";   
+             $errorArray['filetype'] =  "Not a valid type!";   
             }
             if($upload_ok){
                 if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file)){
                     $values[]= "`avatar_url`='$target_file'";
-                    echo "Profile image has been updated.";    
+                    $outputArray['image'] =   "Profile image has been updated.";    
                 }         
             }
     }
@@ -54,10 +54,9 @@ $id = $_SESSION['userinfo']['id'];
             $email = $_POST['email'];
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
             if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-                $values[]= "`email`='$email'";
-                 echo("$email is a valid email address<br>");
+                 $values[]= "`email`='$email'";
             } else {
-                 echo("$email is not a valid email address<br>");
+                 $errorArray['email'] = "$email is not a valid email address";
             }   
         }
         $values = join(", ", $values);
@@ -75,7 +74,6 @@ $id = $_SESSION['userinfo']['id'];
         }
         else{
             //user was not updated in db
-            echo("There was a problem updating username");
             $errorArray[] = mysqli_error($con);
             echo json_encode($errorArray);
         }

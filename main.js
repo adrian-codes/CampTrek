@@ -93,8 +93,12 @@ $('document').ready(function () {
             processData: false,
             cache: false,
             success: function (response) {
-                console.log("Hi");
-            }
+                console.log(response.url);
+                $('img').attr('src', response.url +"?timestamp=" + new Date().getTime());
+            },
+           // error: function (response){
+            // console.log(response);   
+           // }
 
         }); //end of ajax
     });
