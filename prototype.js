@@ -3,18 +3,35 @@ $('document').ready(function () {
     var map;
     var service;
 
-    function handleSearchResults(results, status) {
+    function handleSearchResults(place, status) {
+        console.log(place);
         var image = {
             url: 'images/campingicon.svg',
             scaledSize: new google.maps.Size(20, 20)
         };
 
-        for (var i = 0; i < results.length; i++) {
+        for (var i = 0; i < place.length; i++) {
+            
+            var request ={
+                placeId: place[i].place_id
+                
+            };
+            var infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+            
+            service.getDetails(request, function(place, status) {
+                if (status == google.maps.places.PlacesServiceStatus.OK) {
 
-            var marker = new google.maps.Marker({
-                position: results[i].geometry.location,
-                map: map,
-                icon: image,
+                    var marker = new google.maps.Marker({
+                        position: place[i].geometry.location,
+                        map: map,
+                        icon: image,
+                    });
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.setContent(place[i].name);
+                        infowindow.open(map, this);
+                    });
+                }
             });
         }
     }
