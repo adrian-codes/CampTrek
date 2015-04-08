@@ -2,8 +2,7 @@
     $errorArray = [];
     //if post set then register user to blog db
     if(isset($_POST)){
-        $con = mysqli_connect('localhost', 'root', '', 'camptrek');
-        
+        require_once('mysql_connect.php');
         if($_POST['username'] == ''){
             $errorArray['username'] = "There is no username";
         } else {

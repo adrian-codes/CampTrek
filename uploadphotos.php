@@ -27,7 +27,7 @@
             <input class="btn btn-default" type="submit" value="Upload File" name="submit">
         </form>
 <?php
-$con = mysqli_connect('localhost', 'root', '', 'camptrek'); 
+require_once('mysql_connect.php');
 $userID = $_SESSION['userinfo']['id'];
 
 if(isset($_FILES['fileToUpload'])){

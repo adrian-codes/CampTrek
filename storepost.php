@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'camptrek');
+require_once('mysql_connect.php');
 $errorArray = [];
 $outputArray = [];
 

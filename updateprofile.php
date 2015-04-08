@@ -60,7 +60,7 @@ $id = $_SESSION['userinfo']['id'];
             }   
         }
         $values = join(", ", $values);
-        $con = mysqli_connect('localhost', 'root', '', 'camptrek');
+        require_once('mysql_connect.php');
         $sql = "UPDATE users SET $values WHERE id=$id;";
 
         if($results = mysqli_query($con, $sql)){

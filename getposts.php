@@ -1,6 +1,6 @@
 <?php
     //connect to database
-    $con = mysqli_connect('localhost', 'root', '', 'camptrek');
+    require_once('mysql_connect.php');
     //create sql query
     $sql = 'SELECT p.*, i.src_id, i.src_type, i.photoURL, i.photoDesc, i.author_id, you.username FROM `post` AS p JOIN `images` AS i ON p.id = i.src_id JOIN `users` AS you ON p.user_id = you.id';
     //execute query
