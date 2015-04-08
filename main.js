@@ -48,7 +48,7 @@ $('document').ready(function () {
         dataType: 'json',
         method: 'post',
         success: function (response) {
-            console.log(response);
+            //console.log(response);
 
             var username = response.data[0].username;
             var email = response.data[0].email;
@@ -65,31 +65,23 @@ $('document').ready(function () {
         }
     }); // end of ajax call
 
-    var updatebtn = $('#updatebtn');
-
-    updatebtn.click(function () {
-
-        //store updated info if entered else store placeholder info
-        var usernameEl = $('#username');
-        if (usernameEl.val() == "") {
-            var username = usernameEl.attr('placeholder');
-        } else {
-            username = usernameEl.val();
-        }
-        var emailEl = $('#email');
-        if (emailEl.val() == "") {
-            var email = emailEl.attr('placeholder');
-        } else {
-            email = emailEl.val();
-        }
-
+    $('#updatebtn').click(function () {
+        
         //create formdata object with image data
         var form = $('#uploadImage')[0];
 
         //append username and email input into formata object
         var data = new FormData(form);
-        data.append('username', username);
-        data.append('email', email);
+
+        //store values to update profile data
+
+        $('input').each(function(){
+            var inputs=$(this);
+            //check if values are different from db
+            if (inputs.val() != "" && inputs.val() != inputs.attr('placeholder')) {
+                data.append(inputs.attr('name'), inputs.val());
+            }
+        });
 
         //ajax call sending updated data to updateprofile.php
         $.ajax({
@@ -100,12 +92,10 @@ $('document').ready(function () {
             contentType: false,
             processData: false,
             cache: false,
-            success: function () {
-                console.log("success!");
+            success: function (response) {
+                console.log("Hi");
             }
 
         }); //end of ajax
     });
-
-
 });
