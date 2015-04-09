@@ -11,7 +11,7 @@
 <body>
     <?php include('includes/header.php'); ?>
     <h3>Find a campsite near you!<small> Click the icon to get directions.</small></h3>
-    <div class="container">
+    <div class="container-fluid">
         <div id="map-canvas">
 
         </div>
