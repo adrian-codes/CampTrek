@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>CampTrek</title>
-    <?php include('scripts.php'); ?>
+    <?php include( 'scripts.php'); ?>
 </head>
 
 <body>
-    <?php include('includes/header.php'); ?>
-    <div class="container">
+    <?php include( 'includes/header.php'); ?>
+    <div class="container-fluid" id="bg-img">
         <h1>Welcome to CampTrek!</h1>
         <h3>Login below<small><a href="signup.php">&nbsp;Not a member? Sign up here!</a></small></h3>
         <form class="form-horizontal col-md-6" action="loginpage.php" method="post">
@@ -32,7 +32,6 @@
                 </div>
             </div>
         </form>
-
     </div>
 </body>
 
