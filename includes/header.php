@@ -1,4 +1,4 @@
-<header class="navbar navbar-default navbar-static-top">
+<header class="navbar navbar-inverse navbar-static-top">
     <nav class='container' role='navigation'>
         <div class='navbar-header'>
         <a href="home.php" class='navbar-brand'>CampTrek</a>
