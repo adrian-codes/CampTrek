@@ -76,7 +76,7 @@ $('document').ready(function () {
         //store values to update profile data
 
         $('input').each(function(){
-            var inputs=$(this);
+            var inputs = $(this);
             //check if values are different from db
             if (inputs.val() != "" && inputs.val() != inputs.attr('placeholder')) {
                 data.append(inputs.attr('name'), inputs.val());
@@ -101,5 +101,21 @@ $('document').ready(function () {
            // }
 
         }); //end of ajax
+    }); //end of click function
+    
+    $('#loginBtn').click(function(){
+        var data = {
+              
+        };
+        
+        $.ajax({
+            url: 'loginpage.php',
+            dataType: 'json',
+            data: data,
+            method: 'post',
+            success: function() {
+                
+            }
+        });
     });
-});
+}); //end of document.ready 

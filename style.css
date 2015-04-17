@@ -15,9 +15,6 @@
     margin-bottom: 0;
     height: 5vh;
 }
-.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
-    color: rgb(92, 116, 144);
-}
-footer h5 {
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand, footer h5 {
     color: rgb(92, 116, 144);
 }
