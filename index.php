@@ -5,9 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <title>CampTrek | Home</title>
-    <link rel="icon" 
-      type="image/png" 
-      href="/images/favicon.png" />
     <?php include( 'scripts.php'); ?>
 </head>
 

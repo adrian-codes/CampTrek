@@ -34,5 +34,4 @@
             $errorArray['loginError'] = "Username/Password is incorrect";
             echo json_encode($errorArray);
         }
-
 ?>

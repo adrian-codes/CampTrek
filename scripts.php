@@ -4,3 +4,4 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="main.js"></script>
 <link type="text/css" rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="/images/favicon.png" />
