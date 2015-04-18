@@ -76,7 +76,7 @@ $('document').ready(function () {
         //store values to update profile data
 
         $('input').each(function(){
-            var inputs=$(this);
+            var inputs = $(this);
             //check if values are different from db
             if (inputs.val() != "" && inputs.val() != inputs.attr('placeholder')) {
                 data.append(inputs.attr('name'), inputs.val());
@@ -101,5 +101,28 @@ $('document').ready(function () {
            // }
 
         }); //end of ajax
+    }); //end of click function
+    
+    $('#loginBtn').click(function(){
+        var data = {
+            useremail: $('#inputEmail').val(),
+            password: $('#inputPassword').val(),
+        };
+        
+        $.ajax({
+            url: 'loginpage_ajax.php',
+            dataType: 'json',
+            data: data,
+            method: 'post',
+            success: function(response) {
+                window.response = response;
+                var myHeader =  $('#myHeader');
+                var headerHeight = myHeader.height();
+                console.log("my resonse: ", response);
+                myHeader.css('height', headerHeight+'px');
+                    myHeader.find('header').hide('slow').html(response.header).show('slow');
+                $('#modalClose').click();
+            }
+        });
     });
-});
+}); //end of document.ready 

@@ -15,7 +15,7 @@ function initialize(pos) {
     map = new google.maps.Map(document.getElementById('map-canvas'), {
 
         center: new google.maps.LatLng(coords.latitude, coords.longitude),
-        zoom: 8,
+        zoom: 10,
         styles: [
             {
                 stylers: [

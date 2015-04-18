@@ -1,3 +1,20 @@
 #map-canvas {
     height: 80vh;   
 }
+
+#bg-img {
+    background-image: url(images/stars.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+    color: white;
+}
+
+.navbar {
+    margin-bottom: 0;
+    height: 5vh;
+}
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand, footer h5 {
+    color: rgb(92, 116, 144);
+}
