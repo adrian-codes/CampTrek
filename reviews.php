@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>CampTrek | Home</title>
+    <title>CampTrek | Reviews</title>
     <?php include('scripts.php'); ?>
 </head>
 <body>
@@ -15,4 +15,5 @@
         </div>
     </div>
 </body>
+    <?php include('modal.php'); ?>
 </html>

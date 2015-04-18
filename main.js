@@ -105,16 +105,23 @@ $('document').ready(function () {
     
     $('#loginBtn').click(function(){
         var data = {
-              
+            useremail: $('#inputEmail').val(),
+            password: $('#inputPassword').val(),
         };
         
         $.ajax({
-            url: 'loginpage.php',
+            url: 'loginpage_ajax.php',
             dataType: 'json',
             data: data,
             method: 'post',
-            success: function() {
-                
+            success: function(response) {
+                window.response = response;
+                var myHeader =  $('#myHeader');
+                var headerHeight = myHeader.height();
+                console.log("my resonse: ", response);
+                myHeader.css('height', headerHeight+'px');
+                    myHeader.find('header').hide('slow').html(response.header).show('slow');
+                $('#modalClose').click();
             }
         });
     });

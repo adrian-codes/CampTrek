@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
 <head>
@@ -18,4 +19,5 @@
         <button class="btn btn-default" onclick="performSearch()">Redo Search</button>
     </div>
 </body>
+    <?php include('modal.php'); ?>
 </html>

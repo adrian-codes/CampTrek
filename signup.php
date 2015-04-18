@@ -1,5 +1,5 @@
 <!--registration form -->
-<form class="form-horizontal col-md-4 col-md-offset-2" action="registrationadd.php" method="post">
+<form class="form-horizontal" action="registrationadd.php" method="post">
     <h3>Not a member? Sign up here!</h3>
     <div class="form-group">
         <label for="inputUsername" class="col-md-2 control-label">Username</label>
@@ -21,7 +21,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <button type="button" class="btn btn-default" id="registerBtn">Register</button>
+            <button type="button" class="btn btn-primary" id="registerBtn">Register</button>
         </div>
     </div>
 </form>

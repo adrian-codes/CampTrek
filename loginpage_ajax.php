@@ -25,17 +25,14 @@
             ob_start();
             include('includes/header.php');
             $header_output = ob_get_contents();
-            ob_flush();
-            $output = ['header'=>$header_output,
-                      'success'=>true];
+            ob_end_clean();
+            echo json_encode(['header'=>$header_output,
+                      'success'=>true]);
         }
         else{
             //user was not found in database
             $errorArray['loginError'] = "Username/Password is incorrect";
             echo json_encode($errorArray);
-
-            
-            header('Location: index.php');
         }
 
 ?>
