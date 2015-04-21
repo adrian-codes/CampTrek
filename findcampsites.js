@@ -44,7 +44,7 @@ function initialize(pos) {
 function performSearch() {
     var request = {
         bounds: map.getBounds(),
-        keyword: 'park',
+        keyword: 'campground',
         type: 'campground',
         rankBy: 'prominence',
     };
