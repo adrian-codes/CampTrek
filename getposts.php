@@ -21,7 +21,7 @@
         $tips_tricks = $post_row['tips_tricks'];
         $user_id= $post_row['user_id'];
         $like_count = $post_row['like_count'];
-        $date = $post_row['date'];
+        $date = date("F d Y", $post_row['date']);
         $image_src_id = $post_row['src_id'];
         $image_src_type = $post_row['src_type'];
         $image_photoURL = $post_row['photoURL'];

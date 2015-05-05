@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>CampTrek | Find Campsites</title>
     <?php include('scripts.php')?>
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script src="findcampsites.js"></script>
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>

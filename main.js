@@ -119,7 +119,7 @@ $('document').ready(function () {
                 window.response = response;
                 var myHeader =  $('#myHeader');
                 var headerHeight = myHeader.height();
-                console.log("my resonse: ", response);
+                //console.log("my resonse: ", response);
                 myHeader.css('height', headerHeight+'px');
                     myHeader.find('header').hide('slow').html(response.header).show('slow');
                 $('#modalClose').click();
@@ -141,6 +141,7 @@ $('document').ready(function () {
             data: data,
             method: 'post',
             success: function(response) {
+                //header login animation
                 var myHeader =  $('#myHeader');
                 var headerHeight = myHeader.height();
                 myHeader.css('height', headerHeight+'px');
