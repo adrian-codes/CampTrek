@@ -7,7 +7,9 @@
     <?php include('scripts.php'); ?>
 </head>
 <body>
+    <div id="myHeader">
     <?php include('includes/header.php'); ?>
+    </div>
     <div class="container">
         <h1>Latest Reviews</h1>
         <div id="postContainer">

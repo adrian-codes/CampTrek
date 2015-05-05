@@ -7,7 +7,9 @@
     <?php include('scripts.php'); ?>
 </head>
 <body>
+    <div id="myHeader">
     <?php include( 'includes/header.php'); ?>
+    </div>
     <div class="container">
         <h2>Step One: Submit Review</h2>
         <form  action="storepost.php" method="post" class="form-horizontal col-md-6">

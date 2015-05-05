@@ -10,7 +10,9 @@
 </head>
 
 <body>
+    <div id="myHeader">
     <?php include( 'includes/header.php'); ?>
+    </div>
     <div class="container">
         <h2 class="col-md-12">Step Two: Upload Your Photos</h2>
         <form class="form-horizontal col-md-6" action="uploadphotos.php" method="post" enctype="multipart/form-data">

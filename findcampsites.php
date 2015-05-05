@@ -9,7 +9,9 @@
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="myHeader">
     <?php include('includes/header.php'); ?>
+    </div>
     <h3>Find a campsite near you!<small> Click the icon to get directions.</small></h3>
     <div class="container-fluid">
         <div id="map-canvas">
