@@ -1,3 +1,3 @@
-<footer class="navbar navbar-inverse navbar-static-top">
-    <h5 class="text-center">Website designed by Adrian Nieto</h5>
+<footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <h5 class="text-center"><a href='about.php'>About CampTrek</a></h5>
 </footer>

@@ -19,6 +19,7 @@
         </div>
         <button class="btn btn-default" onclick="performSearch()">Redo Search</button>
     </div>
+    <?php include( 'includes/footer.php'); ?>
 </body>
     <?php include('modal.php'); ?>
 </html>

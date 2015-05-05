@@ -52,5 +52,6 @@
             <button type="submit" name="submitbutton" value="submit" class="btn btn-default" id="form_submit_button">Submit</button>
         </form>
     </div>
+    <?php include( 'includes/footer.php'); ?>
 </body>
 </html>

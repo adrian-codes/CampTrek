@@ -14,7 +14,7 @@
 
 
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-tabs" id="modal" role="tablist">
                         <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a>
                         </li>
                         <li role="presentation"><a href="#signUp" aria-controls="sign up" role="tab" data-toggle="tab">Sign Up</a>
