@@ -66,6 +66,7 @@ if(isset($_POST)){
         $outputArray['message'] = "Files uploaded successfuly!";
     } 
     else{
+        //output error array if failure
         $outputArray['success'] = false;
         $outputArray['message'] = "There were errors!";
         $outputArray['errors'] = $errorArray; 

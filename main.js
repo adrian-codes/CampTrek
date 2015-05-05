@@ -103,6 +103,7 @@ $('document').ready(function () {
         }); //end of ajax
     }); //end of click function
     
+    //login ajax call
     $('#loginBtn').click(function(){
         var data = {
             useremail: $('#inputEmail').val(),
@@ -118,11 +119,37 @@ $('document').ready(function () {
                 window.response = response;
                 var myHeader =  $('#myHeader');
                 var headerHeight = myHeader.height();
-                console.log("my resonse: ", response);
+                //console.log("my resonse: ", response);
                 myHeader.css('height', headerHeight+'px');
                     myHeader.find('header').hide('slow').html(response.header).show('slow');
                 $('#modalClose').click();
             }
         });
-    });
+    }); //end of click function
+    
+    //register ajax call
+        $('#registerBtn').click(function(){
+        var data = {
+            username: $('#regUsername').val(),
+            useremail: $('#regEmail').val(),
+            password: $('#regPassword').val(),
+        };
+        
+        $.ajax({
+            url: 'registrationadd_ajax.php',
+            dataType: 'json',
+            data: data,
+            method: 'post',
+            success: function(response) {
+                //header login animation
+                var myHeader =  $('#myHeader');
+                var headerHeight = myHeader.height();
+                myHeader.css('height', headerHeight+'px');
+                myHeader.find('header').hide('slow').html(response.header).show('slow');
+                $('#modalClose').click();
+            }
+        });
+    }); //end of click function
+    
+    
 }); //end of document.ready 

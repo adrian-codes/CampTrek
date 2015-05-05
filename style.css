@@ -15,6 +15,27 @@
     margin-bottom: 0;
     height: 5vh;
 }
-.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand, footer h5 {
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand, footer h5 a{
     color: rgb(92, 116, 144);
+}
+body{
+    padding-bottom: 70px;   
+}
+#bodyColor{
+    background-color: rgb(29, 43, 58);
+    padding-bottom: 0px;
+}
+.textBackground{
+    background-color: rgba(29, 43, 58, .6);
+
+}
+.textBackground h3{
+    color: white;   
+}
+#bg-img small, #modal li a, #modal lia{
+    color: rgb(92, 116, 144);
+}
+.btn-primary{
+    background-color: rgb(92, 116, 144);
+    border-color: rgb(92, 116, 144);
 }

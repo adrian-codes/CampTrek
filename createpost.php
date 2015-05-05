@@ -7,7 +7,9 @@
     <?php include('scripts.php'); ?>
 </head>
 <body>
+    <div id="myHeader">
     <?php include( 'includes/header.php'); ?>
+    </div>
     <div class="container">
         <h2>Step One: Submit Review</h2>
         <form  action="storepost.php" method="post" class="form-horizontal col-md-6">
@@ -50,5 +52,6 @@
             <button type="submit" name="submitbutton" value="submit" class="btn btn-default" id="form_submit_button">Submit</button>
         </form>
     </div>
+    <?php include( 'includes/footer.php'); ?>
 </body>
 </html>

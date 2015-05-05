@@ -9,7 +9,9 @@
 </head>
 
 <body>
+    <div id="myHeader">
     <?php include( 'includes/header.php'); ?>
+    </div>
     <div class="container">
         <div id="profileinfo">
             <h4>Member Since: <small id="date_created"></small></h4>
@@ -38,6 +40,7 @@
             </form>
         </div>
     </div>
+    <?php include( 'includes/footer.php'); ?>
 </body>
 
 </html>

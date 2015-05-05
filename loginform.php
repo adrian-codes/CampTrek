@@ -15,7 +15,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <button type="button" class="btn btn-primary" id="loginBtn">Sign in</button>
+            <button type="button" class="btn btn-primary btn-color" id="loginBtn">Sign in</button>
         </div>
     </div>
 </form>
