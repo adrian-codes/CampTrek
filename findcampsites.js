@@ -6,13 +6,20 @@ var coords;
 //check for users location
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(initialize);
-
+    
 } else {
     mapCanvas.html("Geolocation is not supported by this device.");
 }
+
 //create new map
 function initialize(pos) {
-    coords = pos.coords;
+    if(pos.coords = "undefined"){
+        coords = { latitude: 34.1690341, longitude: -117.7846935 };
+    }
+    else{
+        coords = pos.coords;   
+    }
+    console.log("2nd", coords);
     map = new google.maps.Map(document.getElementById('map-canvas'), {
 
         center: new google.maps.LatLng(coords.latitude, coords.longitude),
@@ -53,7 +60,7 @@ function performSearch() {
 }
 //create marker for all results
 function callback(results, status) {
-    console.log(results);
+    //console.log(results);
     if (status != google.maps.places.PlacesServiceStatus.OK) {
         alert(status);
         return;

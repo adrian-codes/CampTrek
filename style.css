@@ -1,5 +1,5 @@
 #map-canvas {
-    height: 80vh;   
+    height: 75vh;   
 }
 
 #bg-img {
@@ -38,4 +38,10 @@ body{
 .btn-primary{
     background-color: rgb(92, 116, 144);
     border-color: rgb(92, 116, 144);
+}
+#searchDiv{
+    padding-top: 1%;   
+}
+#map-canvas{
+    margin-top: 2%;   
 }

@@ -14,6 +14,7 @@
     </div>
     <div class="container-fluid" id="bg-img">
         <h1 class="text-center"><span class="textBackground">Welcome to CampTrek!<small> Let's plan your next trip!</small></span></h1>
+        <h4 class="text-center"><span class="textBackground">CampTrek is a platform for camping beginners and experts to find campsites, share photos, tips/tricks and reviews of campsites.</span></h4><br>
         <div class="col-md-5 col-md-offset-1 textBackground">
             <h3 class="text">Step 1: Find a campsite</h3>
             
