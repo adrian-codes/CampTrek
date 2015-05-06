@@ -11,7 +11,7 @@
     <?php include('includes/header.php'); ?>
     </div>
     <div class="container">
-        <h1>Latest Reviews</h1>
+        <h1 class="text-center">Check out the lastest reviews.</h1><br>
         <div id="postContainer">
         
         </div>
